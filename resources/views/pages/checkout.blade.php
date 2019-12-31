@@ -1,4 +1,4 @@
-@extends('layout.checkout')
+@extends('layout.detail')
 @section('content')
 	<main>
 		<section class="section-details-header"></section>

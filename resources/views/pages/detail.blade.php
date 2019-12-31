@@ -1,5 +1,9 @@
-@extends('layout.app')
+@extends('layout.checkout')
 
+@section('title')
+
+	Detail Travel
+@endsection
 @section('content')
 	<main>
 		<section class="section-details-header"></section>
@@ -113,7 +117,7 @@
 							</table>
 						</div>
 						<div class="join-container">
-							<a href="" title="" class="btn btn-block btn-join-now mt-3 py-2">Join Now</a>
+							<a href="" title="" class="btn btn-block btn-join-now mt-3 py-2" style="background-color: #ffa621; color: #fff;">Join Now</a>
 						</div>
 					</div>
 				</div>

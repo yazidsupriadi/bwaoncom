@@ -31,15 +31,32 @@
       </li>
     </ul>
     
+      @guest
 					<!--mobile button-->
 						<form class="form-inline d-sm-block d-md-none">
-							<button type="" class="btn btn-login my-2 my-sm-0 px-4">Masuk</button>
+							<button class="btn btn-login my-2 my-sm-0 px-4" type="button" onclick="event.preventDefault(); location.href='{url('login')}';">Masuk</button>
 						</form>
 					<!--desktop button-->
 
 						<form class="form-inline my-2 my-lg-0 d-none d-md-block">
-							<button type="" class="btn btn-login my-2 my-sm-0 px-4">Masuk</button>
+							<a href="{{url('login')}}" title=""><button type="button" class="btn btn-login my-2 my-sm-0 px-4" onclick="event.preventDefault(); location.href='{url('login')}';">Masuk</button></a>
 						</form>
+      @endguest
+
+
+      @auth
+          <!--mobile button-->
+            <form class="form-inline d-sm-block d-md-none" method="POST" action="{{url('logout')}}">
+              @csrf
+              <button class="btn btn-login my-2 my-sm-0 px-4" type="submit" >Keluar</button>
+            </form>
+          <!--desktop button-->
+
+            <form class="form-inline my-2 my-lg-0 d-none d-md-block" method="POST" action="{{url('logout')}}">
+              @csrf
+              <button type="submit" class="btn btn-login my-2 my-sm-0 px-4" >Keluar</button>
+            </form>
+      @endauth
   </div>
 	</nav>
 </div>
