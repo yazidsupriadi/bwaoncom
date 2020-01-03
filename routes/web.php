@@ -22,7 +22,9 @@ Route::prefix('admin')
 	->middleware(['auth','admin'])
 	->group(function ()
 	{
-		Route::get('/','DashboardController@index');	
+		Route::get('/','DashboardController@index');
+		Route::resource('travel-package','TravelPackageController');
+		Route::resource('gallery','GalleryController');	
 	});
 
 
