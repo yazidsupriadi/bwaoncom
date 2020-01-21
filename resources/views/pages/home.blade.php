@@ -62,7 +62,7 @@
 							</div>
 							<div class="travel-button mt-auto">
 								
-								<a href="" title="" class="btn btn-travel-details px-4">View Details</a>
+								<a href="{{url('/detail/'.$item->slug)}}" title="" class="btn btn-travel-details px-4">View Details</a>
 
 							</div>
 						</div>

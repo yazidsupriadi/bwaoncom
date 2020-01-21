@@ -12,8 +12,8 @@
 */
 
 Route::get('/','HomeController@index');
+Route::get('/detail/{slug}','DetailController@index');
 
-Route::get('/detail','DetailController@index');
 Route::get('/checkout','CheckoutController@index');
 Route::get('/checkout/success','CheckoutController@success');
 
