@@ -24,7 +24,8 @@ Route::prefix('admin')
 	{
 		Route::get('/','DashboardController@index');
 		Route::resource('travel-package','TravelPackageController');
-		Route::resource('gallery','GalleryController');	
+		Route::resource('gallery','GalleryController');
+		Route::resource('transaction','TransactionController');	
 	});
 
 

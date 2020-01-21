@@ -33,7 +33,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="{{route('transaction.index')}}">
           <i class="fas fa-fw fa-clipboard-list"></i>
           <span>Transaksi</span></a>
       </li>
