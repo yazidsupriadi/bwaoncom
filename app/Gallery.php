@@ -11,7 +11,7 @@ class Gallery extends Model
     protected $table = 'galleries';
 
     protected $fillable = [
-    	'travel_packages_id','image'
+    	'travel_package_id','image'
     ];
 
     protected $hidden = [

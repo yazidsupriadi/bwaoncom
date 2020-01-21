@@ -10,7 +10,7 @@
 		<h1> Explore your beautifull world <br> and make the unforgetable moment</h1>
 		<p> you will see the moment <br> that you never forget 	</p>
 
-		<a href="" title="" class="btn btn-get-started px-4 mt-4">Get Started</a>
+		<a href="#popular-content" title="" class="btn btn-get-started px-4 mt-4">Get Started</a>
 	</header><!-- /header -->
 
 
@@ -50,14 +50,15 @@
 			<div class="container">
 				<div class="row section-popular-travel justify-content-center">
 					
+					@foreach($items as $item)
 					<div class="col-sm-6 col-md-4 col-lg-3">
 						<div class="card-travel text-center d-flex flex-column
-						" style="background-image: url('frontend/images/content/popular1.jpg');">
+						" style="background-image: url('{{$item->galleries->count() ? Storage::url($item->galleries->first()->image) : ''}}');">
 							<div class="travel-country">
-								Indonesia
+								{{$item->title}}
 							</div>
 							<div class="travel-location">
-								Jakarta,Indonesia
+								{{$item->location}}
 							</div>
 							<div class="travel-button mt-auto">
 								
@@ -66,58 +67,8 @@
 							</div>
 						</div>
 					</div>
-
-					<div class="col-sm-6 col-md-4 col-lg-3">
-						<div class="card-travel text-center d-flex flex-column
-						" style="background-image: url('frontend/images/content/popular2.jpg');">
-							<div class="travel-country">
-								Malaysia
-							</div>
-							<div class="travel-location">
-								Kuala Lumpur,Malaysia
-							</div>
-							<div class="travel-button mt-auto">
-								
-								<a href="" title="" class="btn btn-travel-details px-4">View Details</a>
-
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-4 col-lg-3">
-						<div class="card-travel text-center d-flex flex-column
-						" style="background-image: url('frontend/images/content/popular3.jpg'); background-size: cover;">
-							<div class="travel-country">
-								Saudi Arabia
-							</div>
-							<div class="travel-location">
-								Mecca,Saudi Arabia
-							</div>
-							<div class="travel-button mt-auto">
-								
-								<a href="" title="" class="btn btn-travel-details px-4">View Details</a>
-
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-4 col-lg-3">
-						<div class="card-travel text-center d-flex flex-column
-						" style="background-image: url('frontend/images/content/popular4.jpg');">
-							<div class="travel-country">
-								Germany
-							</div>
-							<div class="travel-location">
-								Hamburg,Germany
-							</div>
-							<div class="travel-button mt-auto">
-								
-								<a href="" title="" class="btn btn-travel-details px-4">View Details</a>
-
-							</div>
-						</div>
-					</div>
-
+					@endforeach
+					
 
 				</div>
 			</div>
