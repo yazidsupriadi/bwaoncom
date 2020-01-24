@@ -9,7 +9,7 @@
 			<p> We have sent you an email </p>
 			<br>
 			<p>Please read it as well </p>
-			<a href="" title="" class="btn btn-primary">Go To Homepage</a>
+			<a href="{{url('/')}}" title="" class="btn btn-primary">Go To Homepage</a>
 			</div>
 		</div>
 	</main>

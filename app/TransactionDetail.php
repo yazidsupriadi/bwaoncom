@@ -9,7 +9,7 @@ class TransactionDetail extends Model
     //
     protected $table = 'transaction_details';
 
-    protected $fillable = ['transaction_id','username','nationality','is_visa','doe_passport'];
+    protected $fillable = ['transaction_id','username','nationality','is_visa','doe_pasport'];
 
     
 

@@ -82,22 +82,22 @@
 							<table class="trip-information">
 									<tr>
 										<th width="50%">Date Of Deaparture</th>
-												<td width="50%" class="text-right">23, August 2019</td>
+												<td width="50%" class="text-right">{{\Carbon\Carbon::create($items->departure_date)->format('F n, Y')}}</td>
 								
 									</tr>
 										<tr>
 										<th width="50%">Duration</th>
-												<td width="50%" class="text-right">2 Hours</td>
+												<td width="50%" class="text-right">{{$items->duration}} </td>
 								
 									</tr>
 									<tr>
 										<th width="50%">Type </th>
-												<td width="50%" class="text-right">Open Trip</td>
+												<td width="50%" class="text-right">{{$items->type}}</td>
 								
 									</tr>
 									<tr>
 										<th width="50%">Price</th>
-												<td width="50%" class="text-right">$80/person</td>
+												<td width="50%" class="text-right">Rp. {{$items->price}},00/person</td>
 								
 									</tr>
 								
@@ -105,7 +105,20 @@
 							</table>
 						</div>
 						<div class="join-container">
-							<a href="" title="" class="btn btn-block btn-join-now mt-3 py-2" style="background-color: #ffa621; color: #fff;">Join Now</a>
+							@auth
+							<form action="{{route('checkout',$items->id)}}" method="POST" accept-charset="utf-8">
+								@csrf
+									<button class="btn btn-block btn-join-now mt-3 py-2" style="background-color: #ffa621; color: #fff;">Join Now</button>
+								
+								
+							</form>
+							@endauth
+
+							@guest
+									<a href="{{route('login')}}" title="" class="btn btn-block btn-join-now mt-3 py-2 btn-danger" style=" color: #fff;">Join Now</a>
+						
+
+							@endguest
 						</div>
 					</div>
 				</div>

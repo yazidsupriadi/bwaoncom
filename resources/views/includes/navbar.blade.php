@@ -2,7 +2,7 @@
 	<!-- navbar -->
 <div class="container">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light ">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="{{url('/')}}" class=""><h3 class="font-weight-bold font-italic" style="color: #3700B3">Oncom Travel </h3></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
